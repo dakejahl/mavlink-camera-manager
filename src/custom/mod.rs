@@ -14,6 +14,7 @@ arg_enum! {
         BlueROVUDP,
         BlueROVRTSP,
         PrismUDP,
+        PrismRTSP,
     }
 }
 
@@ -29,5 +30,6 @@ pub fn create_default_streams() -> Vec<VideoAndStreamInformation> {
         CustomEnvironment::BlueROVUDP => bluerov::udp(),
         CustomEnvironment::BlueROVRTSP => bluerov::rtsp(),
         CustomEnvironment::PrismUDP => prism::udp(),
+        CustomEnvironment::PrismRTSP => prism::rtsp(),
     }
 }

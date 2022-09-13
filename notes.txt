@@ -1,0 +1,3 @@
+# Building the project
+# Running the project
+RUST_LOG=debug cargo run -- --default-settings PrismUDP
