@@ -75,8 +75,8 @@ pub fn rtsp() -> Vec<VideoAndStreamInformation> {
             });
             let size = sizes.last().unwrap();
 
-            // let visible_qgc_ip_address = get_visible_qgc_address().to_string();
-            let visible_qgc_ip_address = "10.223.100.50";
+            let visible_qgc_ip_address = get_visible_qgc_address().to_string();
+            // let visible_qgc_ip_address = "10.223.100.50";
 
             VideoAndStreamInformation {
                 name: format!("RTSP Stream {index}"),

@@ -1,3 +1,4 @@
 # Building the project
 # Running the project
 RUST_LOG=debug cargo run -- --default-settings PrismUDP
+cargo run -- --reset --default-settings PrismRTSP --mavlink udpout:127.0.0.1:14563
