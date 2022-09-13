@@ -6,12 +6,14 @@ use crate::cli;
 use crate::video_stream::types::VideoAndStreamInformation;
 
 mod bluerov;
+mod prism;
 
 arg_enum! {
     #[derive(PartialEq, Debug)]
     pub enum CustomEnvironment {
         BlueROVUDP,
         BlueROVRTSP,
+        PrismUDP,
     }
 }
 
@@ -26,5 +28,6 @@ pub fn create_default_streams() -> Vec<VideoAndStreamInformation> {
     match default_environment {
         CustomEnvironment::BlueROVUDP => bluerov::udp(),
         CustomEnvironment::BlueROVRTSP => bluerov::rtsp(),
+        CustomEnvironment::PrismUDP => prism::udp(),
     }
 }
